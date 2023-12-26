@@ -11,12 +11,14 @@ import QuickStart from "../Learn/QuickStart";
 import PrivetRoute from "../Auth/PrivetRoute";
 import Login from "../Pages/Login";
 import HandelErrRout from "../Auth/Error/HandelErrRout";
+import PageErr404 from "../Auth/Error/PageErr404/PageErr404";
 
 const IsLoginOrNo = true
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
+    
     {/* layout Main */}
     <Route path="/" element={<LayOut/>}  errorElement={<HandelErrRout/>}>
       <Route index element={<Home/>} />
@@ -39,6 +41,19 @@ const router = createBrowserRouter(
     <Route path="QuickStart" element={<QuickStart />}/>
     <Route path="DosReact" element={<DosReact/>}/>
     </Route>
+
+
+
+
+
+
+
+
+
+
+      {/* path name wrong  show page 404 */}
+    {/* Route Page 404    */}
+    <Route path="*" element={<PageErr404/>} />
     </>
   ));
 
