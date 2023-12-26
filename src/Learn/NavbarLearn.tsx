@@ -37,7 +37,7 @@ export default function NavbarLearn() {
             background: "red",
             width:'100%',
             height:'80vh',
-            borderRadius:"8px,"
+            borderRadius:"8px"
           }}
         >
           <Outlet />

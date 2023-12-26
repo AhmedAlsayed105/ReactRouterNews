@@ -8,6 +8,10 @@ import LayOutLearn from "../Learn/LayOutLearn";
 import DosReact from "../Learn/DosReact";
 import Installation from "../Learn/Installation";
 import QuickStart from "../Learn/QuickStart";
+import PrivetRoute from "../Auth/PrivetRoute";
+import Login from "../Pages/Login";
+
+const IsLoginOrNo = true
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,7 +20,16 @@ const router = createBrowserRouter(
     <Route path="/" element={<LayOut/>}>
       <Route index element={<Home/>} />
       <Route path="about" element={<About/>} />
-      <Route path="content" element={<Content/>} />
+      <Route path="login" element={
+        <PrivetRoute IsLogin={!IsLoginOrNo} pathComponent="/content">
+          <Login/>
+        </PrivetRoute>
+      } />
+      <Route path="content" element={
+        <PrivetRoute IsLogin={IsLoginOrNo} pathComponent="/login" >
+          <Content />
+        </PrivetRoute>
+      } />
     </Route>
 {/* layout Learn */}
 

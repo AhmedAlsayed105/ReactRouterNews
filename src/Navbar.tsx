@@ -12,6 +12,7 @@ export default function Navbar() {
     <li className="" ><NavLink to="/">Home</NavLink></li>
     <li className=""><NavLink to="/about">About</NavLink></li>
     <li className="" ><NavLink to="/content"> Content</NavLink></li>
+    <li className="" ><NavLink to="/login"> Login</NavLink></li>
     <li className="" ><NavLink to="/learn"> Learn</NavLink></li>
     </ul>
   )
