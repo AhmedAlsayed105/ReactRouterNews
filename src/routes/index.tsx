@@ -10,6 +10,7 @@ import Installation from "../Learn/Installation";
 import QuickStart from "../Learn/QuickStart";
 import PrivetRoute from "../Auth/PrivetRoute";
 import Login from "../Pages/Login";
+import HandelErrRout from "../Auth/Error/HandelErrRout";
 
 const IsLoginOrNo = true
 
@@ -17,7 +18,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
     {/* layout Main */}
-    <Route path="/" element={<LayOut/>}>
+    <Route path="/" element={<LayOut/>}  errorElement={<HandelErrRout/>}>
       <Route index element={<Home/>} />
       <Route path="about" element={<About/>} />
       <Route path="login" element={
